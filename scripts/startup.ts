@@ -182,6 +182,10 @@ const showWelcome = async () => {
   if (!isFirstRun) {
     await run();
   } else {
+    if (process.argv.includes('--quick-start')) {
+      exec('npm run add checkpoints v1-5-pruned-emaonly.ckpt https://huggingface.co/runwayml/stable-diffusion-v1-5/resolve/main/v1-5-pruned-emaonly.ckpt?download=true');
+    }
+
     await showWelcome();
   }
 })();

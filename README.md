@@ -9,6 +9,13 @@ git clone git@github.com:mjurczyk/pika-gpu.git
 cd pika-gpu && npm install && npm start
 ```
 
+Or, quick start (this will automatically download 4GB SD1.5 model for default ComfyUI workflow):
+
+```bash
+git clone git@github.com:mjurczyk/pika-gpu.git
+cd pika-gpu && npm install && npm start -- --quick-start
+```
+
 # Details
 
 Add your models and their download URLs from [huggingface.co](https://huggingface.co/) to `stack.json`, or add them using:
