@@ -2,7 +2,7 @@
 
 Set countless GPUs on fire in less than 10 seconds with managed SD dependencies.
 
-![lesgo](https://github.com/mrdoob/three.js/assets/9549760/6fb34af5-2ad2-48ab-bf0b-e6962e0f900f)
+![lesgo](https://github.com/mjurczyk/pika-gpu/assets/9549760/eee09fd3-b619-42c8-827f-aa09fe1ada54)
 
 ```bash
 git clone git@github.com:mjurczyk/pika-gpu.git
