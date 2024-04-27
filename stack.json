@@ -1,0 +1,15 @@
+{
+  "checkpoints": {},
+  "clip": {},
+  "clip_vision": {},
+  "loras": {},
+  "controlnet": {},
+  "diffusers": {},
+  "hypernetworks": {},
+  "photomaker": {},
+  "style_models": {},
+  "unet": {},
+  "upscale_models": {},
+  "vae": {},
+  "vae_approx": {}
+}

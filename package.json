@@ -1,0 +1,29 @@
+{
+  "name": "pika-gpu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx --yes ts-node ./scripts/startup.ts",
+    "add": "npx --yes ts-node ./scripts/add.ts"
+  },
+  "keywords": [
+    "ai",
+    "gpu",
+    "cluster",
+    "comfyui",
+    "stable diffusion"
+  ],
+  "author": "mjurczyk",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/filesize": "5.0.0",
+    "@types/fs-extra": "11.0.4",
+    "@types/node": "20.12.7",
+    "filesize": "10.1.1",
+    "fs-extra": "11.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
