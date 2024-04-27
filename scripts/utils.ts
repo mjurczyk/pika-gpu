@@ -14,8 +14,14 @@ export const downloadDependency = async (type: string, name: string, url: string
     extension = extension.split('?')[0];
   }
 
+  let escapedName = name;
+
+  if (!name.endsWith(extension)) {
+    escapedName = `${name}.${extension}`;
+  }
+
   const useSSL = url.startsWith('https');
-  const outputPath = path.resolve(comfyPath + '/models/' + `/${type}/` + `${name}.${extension}`);
+  const outputPath = path.resolve(comfyPath + '/models/' + `/${type}/` + escapedName);
 
   if (existsSync(outputPath)) {
     console.info('pika-gpu', 'dependency already found under', outputPath);
