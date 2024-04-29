@@ -7,7 +7,7 @@ console.info('pika-gpu', 'setting up environment');
 
 const comfyPath = path.resolve(cwd(), 'comfy-ui');
 const [
-  ,,
+  , ,
   dependencyType,
   dependencyName,
   dependencyDownloadURL
@@ -56,7 +56,7 @@ const addToStack = async () => {
   }
 
   if (Object.values(stackFile[dependencyType]).includes(dependencyDownloadURL)) {
-    const [currentName,_] = Object.entries(stackFile[dependencyType]).find(([_, url]) => url === dependencyDownloadURL)!; 
+    const [currentName, _] = Object.entries(stackFile[dependencyType]).find(([_, url]) => url === dependencyDownloadURL)!;
 
     console.info('pika-gpu', `dependency already installed as "${currentName}"`);
 
