@@ -72,7 +72,7 @@ const ensureComfy = async () => {
   }
 
   console.info('pika-gpu', 'comfy cloned');
-  
+
   console.info('pika-gpu', 'use specific comfy.lock version');
 
   try {
@@ -84,6 +84,18 @@ const ensureComfy = async () => {
   }
 
   console.info('pika-gpu', `now using comfy.lock ${comfyLockHash}`);
+
+  console.info('pika-gpu', 'apply comfy manager');
+
+  try {
+    exec(`cd ${comfyPath}/custom_nodes && git clone https://github.com/ltdrdata/ComfyUI-Manager.git`);
+  
+    exec(`cd ${comfyPath}/custom_nodes/ComfyUI-Manager && ${usePython3 ? 'pip3' : 'pip'} install -r requirements.txt`);
+  } catch (error) {
+    console.info('pika-gpu', 'failed to apply comfy manager');
+
+    throw new Error('failed');
+  }
 };
 
 const ensureComfyDependencies = async () => {
@@ -91,7 +103,7 @@ const ensureComfyDependencies = async () => {
 
   try {
     exec(`pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu121`);
-  
+
     exec(`cd ${comfyPath} && ${usePython3 ? 'pip3' : 'pip'} install -r requirements.txt`);
   } catch (error) {
     console.info('pika-gpu', 'failed to install comfy dependencies');
@@ -102,7 +114,7 @@ const ensureComfyDependencies = async () => {
 
     throw new Error('failed');
   }
-  
+
   console.info('pika-gpu', 'installed');
 };
 
@@ -122,7 +134,7 @@ const ensureStack = async () => {
 
   try {
     for (let dependencyType of Object.keys(stackFile)) {
-      for (let [ dependencyName, dependencyUrl ] of Object.entries(stackFile[dependencyType])) {
+      for (let [dependencyName, dependencyUrl] of Object.entries(stackFile[dependencyType])) {
         await downloadDependency(dependencyType, dependencyName, dependencyUrl as string);
       }
     }
