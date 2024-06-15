@@ -3,9 +3,8 @@ import { request as requestHTTP } from 'http';
 import { request as requestHTTPS } from 'https';
 import { filesize } from "filesize";
 import path from 'path';
-import { cwd } from 'process';
 
-const comfyPath = path.resolve(cwd(), 'comfy-ui');
+const comfyPath = path.resolve(__dirname, '../comfy-ui');
 
 export const downloadDependency = async (type: string, name: string, url: string) => {
   let extension = url.split('.').pop()!;

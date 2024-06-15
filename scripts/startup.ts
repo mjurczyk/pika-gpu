@@ -6,9 +6,9 @@ import { downloadDependency } from './utils';
 
 console.info('pika-gpu', 'setting up environment');
 
-const comfyPath = path.resolve(cwd(), 'comfy-ui');
+const comfyPath = path.resolve(__dirname, '../comfy-ui');
 const comfyLockHash = readFileSync(
-  path.resolve(cwd(), './comfy.lock'),
+  path.resolve(__dirname, '../comfy.lock'),
   'utf-8'
 );
 
