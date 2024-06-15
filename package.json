@@ -1,6 +1,6 @@
 {
   "name": "pika-gpu",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "🔥 Set countless GPUs on fire in less than 10 seconds with managed SD dependencies 🔥",
   "main": "index.js",
   "scripts": {
