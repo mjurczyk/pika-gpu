@@ -27,6 +27,6 @@
     "node": ">=18.0.0"
   },
   "bin": {
-    "pika-gpu": "./bin/cli.js"
+    "pika-gpu": "bin/cli.js"
   }
 }
