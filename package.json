@@ -1,7 +1,7 @@
 {
   "name": "pika-gpu",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "🔥 Set countless GPUs on fire in less than 10 seconds with managed SD dependencies 🔥",
   "main": "index.js",
   "scripts": {
     "start": "npx --yes ts-node ./scripts/startup.ts",
@@ -15,8 +15,8 @@
     "stable diffusion"
   ],
   "author": "mjurczyk",
-  "license": "ISC",
-  "devDependencies": {
+  "license": "MIT",
+  "dependencies": {
     "@types/filesize": "5.0.0",
     "@types/fs-extra": "11.0.4",
     "@types/node": "20.12.7",
